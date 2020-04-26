@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_icon_section">
+    <sys_sg_icon_section action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applets>e8f8ff5b1b10101032008515ec4bcb76,678f7b531b50101032008515ec4bcbfb</applets>
+        <data_item/>
+        <display_feed_count>true</display_feed_count>
+        <hide_header>false</hide_header>
+        <orientation>vertical</orientation>
+        <required_roles/>
+        <sys_class_name>sys_sg_icon_section</sys_class_name>
+        <sys_created_by>will.smith</sys_created_by>
+        <sys_created_on>2020-04-26 13:56:52</sys_created_on>
+        <sys_id>06c9bb9b1b10101032008515ec4bcb7d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Future</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_sg_icon_section_06c9bb9b1b10101032008515ec4bcb7d</sys_update_name>
+        <sys_updated_by>will.smith</sys_updated_by>
+        <sys_updated_on>2020-04-26 14:33:01</sys_updated_on>
+        <table/>
+        <title>Future</title>
+        <visible_condition/>
+    </sys_sg_icon_section>
+</record_update>

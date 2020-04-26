@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <active>true</active>
+        <before>false</before>
+        <description>After adding the reques type choices, correct the DB values</description>
+        <flush_cache>false</flush_cache>
+        <name>Correct NeedIt Request Types</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var n = new GlideRecord('x_58872_needit_needit');
+n.addQuery('number', 'NI002003');
+n.setLimit(1);
+n.query();
+
+while (n.next()) {
+    //	gs.info('request type: ' + n.u_request_type);
+    switch (n.u_request_type.toString()) {
+        case 'facilities':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'facilities');
+            break;
+
+        case 'hr':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'hr');
+            break;
+
+        case 'legal':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'legal');
+            break;
+    }
+}
+
+n.update();]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>will.smith</sys_created_by>
+        <sys_created_on>2020-04-26 14:40:21</sys_created_on>
+        <sys_id>68b240671b50101032008515ec4bcb2b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Correct NeedIt Request Types</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_fix_68b240671b50101032008515ec4bcb2b</sys_update_name>
+        <sys_updated_by>will.smith</sys_updated_by>
+        <sys_updated_on>2020-04-26 15:07:41</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>97d0d89cdbc7f3c49df22f17d49619f8</instance_id>
+        <instance_name>dev89829</instance_name>
+        <name>sys_script_fix_68b240671b50101032008515ec4bcb2b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;before&gt;false&lt;/before&gt;&lt;description&gt;After adding the reques type choices, correct the DB values&lt;/description&gt;&lt;flush_cache&gt;false&lt;/flush_cache&gt;&lt;name&gt;Correct NeedIt Request Types&lt;/name&gt;&lt;record_for_rollback&gt;false&lt;/record_for_rollback&gt;&lt;run_once&gt;true&lt;/run_once&gt;&lt;script&gt;&lt;![CDATA[var n = new GlideRecord('x_58872_needit_needit');
+n.addQuery('number', 'NI002003');
+n.setLimit(1);
+n.query();
+
+while (n.next()) {
+    //	gs.info('request type: ' + n.u_request_type);
+    switch (n.u_request_type.toString()) {
+        case 'facilities':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'facilities');
+            break;
+
+        case 'hr':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'hr');
+            break;
+
+        case 'legal':
+            n.setValue('u_request_type', '');
+            n.update();
+            n.setValue('u_request_type', 'legal');
+            break;
+    }
+}
+
+n.update();]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;will.smith&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-26 14:40:21&lt;/sys_created_on&gt;&lt;sys_id&gt;68b240671b50101032008515ec4bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Correct NeedIt Request Types&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_68b240671b50101032008515ec4bcb2b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;will.smith&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-26 15:07:41&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1141991343</payload_hash>
+        <record_name>Correct NeedIt Request Types</record_name>
+        <reverted_from/>
+        <source>c636dc871b1c101032008515ec4bcb3c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>will.smith</sys_created_by>
+        <sys_created_on>2020-04-26 15:07:41</sys_created_on>
+        <sys_id>93f94c2f1b50101032008515ec4bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171b7079d0a0000001</sys_recorded_at>
+        <sys_updated_by>will.smith</sys_updated_by>
+        <sys_updated_on>2020-04-26 15:07:41</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>1ff94c2f395010100f28e80fd3da63f1</update_guid>
+        <update_guid_history>1ff94c2f395010100f28e80fd3da63f1:-1141991343,17a9c02f21501010a157367024c15c14:1049297360,4c29406b9a501010a1692cc138f558ee:-1601878601,5095c0e7fc5010104d8af37ffe793b4e:129969162,f2758ce709501010e0ccdd0599df0f7a:294188963,e7150ce71b501010aee26a027efbd59b:1334548223,75c380a7ad501010b4122acde4b8c179:-1693108946,c7b38467775010106854af2290d69d50:-598792168</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>will.smith</sys_created_by>
+        <sys_created_on>2020-04-26 15:13:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>735b516fbf3d44f99e683e4ed81f0771</sys_id>
+        <sys_metadata>68b240671b50101032008515ec4bcb2b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Correct NeedIt Request Types</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_fix_68b240671b50101032008515ec4bcb2b</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_68b240671b50101032008515ec4bcb2b">93f94c2f1b50101032008515ec4bcbf2</sys_update_version>
+        <sys_updated_by>will.smith</sys_updated_by>
+        <sys_updated_on>2020-04-26 15:13:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
